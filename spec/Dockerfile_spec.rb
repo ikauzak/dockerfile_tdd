@@ -4,7 +4,7 @@ require "docker"
 describe "Dockerfile" do
   before(:all) do
     @image = Docker::Image.build_from_dir('.')
-    @image.tag(repo: 'masuda-teste', tag: 'latest')
+    @image.tag(repo: 'masuda-test', tag: 'latest')
 
     set :os, family: :alpine
     set :backend, :docker
